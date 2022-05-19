@@ -1,15 +1,15 @@
 'use strict';
 
-let num1;
-let num2;
+let num1 = 0;
+let num2 = 0;
 
 let calculator = {
     read() {
         num1 = +prompt('Введите число 1');
         num2 = +prompt('Введите число 2');
 
-        if(typeof num1 !== 'number' && typeof num2 !== 'number'){
-            console.log('не чичло')
+        if( isNaN(Number( num1)) && isNaN(Number( num2)) ){
+            console.log('не чичло');
         }
 
     },
@@ -19,7 +19,7 @@ let calculator = {
     },
 
     mul() {
-        console.log(num1 * num1);
+        console.log(num1 * num2);
     }
 
 
