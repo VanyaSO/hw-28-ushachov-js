@@ -1,19 +1,25 @@
 'use strict';
 
-
+let num1;
+let num2;
 
 let calculator = {
     read() {
-        this.num1 = +prompt('Введите число 1',0);
-        this.num2 = +prompt('Введите число 2',0);
+        num1 = +prompt('Введите число 1');
+        num2 = +prompt('Введите число 2');
+
+        if(typeof num1 !== 'number' && typeof num2 !== 'number'){
+            console.log('не чичло')
+        }
+
     },
 
     sum() {
-        console.log(this.num1 + this.num2);
+        console.log(num1 + num2);
     },
 
     mul() {
-        console.log(this.num1 * this.num1);
+        console.log(num1 * num1);
     }
 
 
